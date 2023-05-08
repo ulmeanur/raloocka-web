@@ -5,9 +5,12 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>Helloo</p>
+        <p>raloocka-web git repository</p>
       </header>
-      <h2>Let's get started!</h2>
+      <h2>Expence tracker</h2>
+      <ExpenseItem></ExpenseItem>
+      <ExpenseItem></ExpenseItem>
+      <ExpenseItem></ExpenseItem>
       <ExpenseItem></ExpenseItem>
     </div>
   );
