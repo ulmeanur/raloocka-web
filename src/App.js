@@ -8,7 +8,11 @@ function App() {
         <p>raloocka-web git repository</p>
       </header>
       <h2>Expence tracker</h2>
-      <ExpenseItem></ExpenseItem>
+      <ExpenseItem 
+        expenceDate="April 19th 2022" 
+        expenceTitle="Hospital Maternity Expence" 
+        expenceAmount = "2505 $">
+      </ExpenseItem>
       <ExpenseItem></ExpenseItem>
       <ExpenseItem></ExpenseItem>
       <ExpenseItem></ExpenseItem>
