@@ -1,16 +1,14 @@
 import "./ExpenseItem.css"
 
 function ExpenseItem(props) {
-	// const expenceDate = "April 19th 2022";
-	// const expenceTitle = "Hospital Maternity Expence" ;
-	// const expenceAmount = "2505 $";
-
+	//props is an object that stores the data that it's passed to the component from another one 
+	// it makes the component reusable
 	return (
 		<div className="expense-item">
-			<div>{props.expenceDate}</div>
+			<div>{props.expenseDate}</div>
 			<div className="expense-item__description">
-				<h2>{props.expenceTitle}</h2>
-				<div className="expense-item__price">{props.expenceAmount}</div>
+				<h2>{props.expenseTitle}</h2>
+				<div className="expense-item__price">{props.expenseAmount}</div>
 			</div>
 		</div>
 	);
