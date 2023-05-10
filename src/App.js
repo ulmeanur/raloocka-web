@@ -6,25 +6,25 @@ function App() {
   const expenses = [
     { 
       id: "e1", 
-      date: "April 19th 2022", 
+      date: new Date('April 19, 2022'), 
       title: "Hospital Maternity Expence", 
       amount: "2500$" 
     },
     { 
       id: "e2", 
-      date: "April 10th 2022", 
+      date: new Date('April 10, 2022'), 
       title: "Car Insurance", 
       amount: "505$"
     },
     {
       id: "e3", 
-      date: "April 11th 2022", 
+      date: new Date('April 11, 2022'), 
       title: "New TV", 
       amount: "1000$" 
     },
     { 
       id: "e4", 
-      date: "April 12th 2022", 
+      date: new Date('April 12, 2022'), 
       title: "New Desk(Wooden)", 
       amount: "250$" 
     }
