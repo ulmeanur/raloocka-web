@@ -1,5 +1,6 @@
 import './Expenses.css';
 import ExpenseItem from '../ExpenseItem/ExpenseItem';
+import Card from '../Card/Card';
 
 // Created a new component that is responsible for displaying expenses
 // Added multiple ExpenseItem components in the component
@@ -8,7 +9,7 @@ import ExpenseItem from '../ExpenseItem/ExpenseItem';
 function Expenses(props) {
     const expensesData = props.expenses;
 	return (
-		<div className='expenses'>
+		<Card className='expenses'>
 			<ExpenseItem
 				expenseDate={expensesData[0].date}
 				expenseTitle={expensesData[0].title}
@@ -30,7 +31,7 @@ function Expenses(props) {
 				expenseTitle={expensesData[3].title}
 				expenseAmount={expensesData[3].amount}
 			></ExpenseItem>
-		</div>
+		</Card>
 	);
 }
 
