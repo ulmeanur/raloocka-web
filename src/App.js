@@ -1,5 +1,5 @@
 import './App.css';
-import ExpenseItem from './components/ExpenseItem/ExpenseItem';
+import Expenses from './components/Expenses/Expenses';
 
 function App() {
 
@@ -36,26 +36,7 @@ function App() {
         <p>raloocka-web git repository</p>
       </header>
       <h2>Expence tracker</h2>
-      <ExpenseItem 
-        expenseDate= {expenses[0].date}
-        expenseTitle={expenses[0].title} 
-        expenseAmount = {expenses[0].amount}>
-      </ExpenseItem>
-      <ExpenseItem 
-        expenseDate= {expenses[1].date}
-        expenseTitle={expenses[1].title} 
-        expenseAmount = {expenses[1].amount}>
-      </ExpenseItem>
-      <ExpenseItem 
-        expenseDate= {expenses[2].date}
-        expenseTitle={expenses[2].title} 
-        expenseAmount = {expenses[2].amount}>2
-      </ExpenseItem>
-      <ExpenseItem 
-        expenseDate= {expenses[3].date}
-        expenseTitle={expenses[3].title} 
-        expenseAmount = {expenses[3].amount}>
-      </ExpenseItem>
+      <Expenses expenses={expenses} />
     </div>
   );
 }
