@@ -1,7 +1,9 @@
+import React from 'react'; //React component is responsible for interpreting jsx code. 
+//The React import isn't necessary to be added as it will be added automatically by the newer React versions
 import './App.css';
 import Expenses from './components/Expenses/Expenses';
 
-function App() {
+const App = () => {
 
   const expenses = [
     { 

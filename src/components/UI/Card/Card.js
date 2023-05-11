@@ -1,7 +1,8 @@
+import React from 'react';
 import './Card.css'
 // building a user interface from smaller building blocks(components) it is cold Composition
 
-function Card(props) {
+const Card = (props) => {
     const classes = 'card ' + props.className;
     return (
         //props.children takes all the content between the component tags

@@ -1,12 +1,12 @@
+import React from 'react';
 import './Expenses.css';
 import ExpenseItem from '../ExpenseItem/ExpenseItem';
-import Card from '../Card/Card';
+import Card from '../UI/Card/Card';
 
 // Created a new component that is responsible for displaying expenses
 // Added multiple ExpenseItem components in the component
 // Keet the expenses data in the App component and passed that data into the newly created component
-
-function Expenses(props) {
+const Expenses = (props) =>  {
     const expensesData = props.expenses;
 	return (
 		<Card className='expenses'>
