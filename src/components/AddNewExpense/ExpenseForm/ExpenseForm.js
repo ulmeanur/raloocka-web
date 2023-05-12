@@ -2,24 +2,50 @@ import './ExpenseForm.css'
 import React, {useState} from 'react';
 
 const ExpenseForm = () => {
+    // storing useState values in an object
+    // const [userInput, setUserInput] = useState ({
+    //     enteredTitle: "",
+    //     enteredAmount: "",
+    //     selectedDate: ""
+    // });
 
+    
+    //using useState() for storing each value is better than using an object will all values that needs to be updated using prevState() because is more reliable
     const [enteredTitle, setEnteredTitle] = useState("");
     const [enteredAmount, setEnteredAmount] = useState("");
     const [selectedDate, setSelectedDate] = useState("");
 
+
     const titleChangeHandler = (event) => {
+        // using prevState we will always use the previous updated state
+        // setUserInput({
+        //     ...prevState,
+        //     enteredTitle: event.target.value
+        // });
+
         console.log("event value", event.target.value);
         setEnteredTitle(event.target.value);
         console.log("enteredTitle = ", enteredTitle);
+
     }
 
     const amountChangeHandler = (event) => {
+        // setUserInput({
+        //     ...prevState,
+        //     enteredAmount: event.target.value
+        // })
         console.log("event value", event.target.value);
         setEnteredAmount(event.target.value);
         console.log("enteredAmount = ", enteredAmount);
     }
 
     const dateChangeHandler = (event) => {
+        // console.log(prevState);
+        // setUserInput({
+        //     ...prevState,
+        //     selectedDate: event.target.value
+        // });
+
         console.log("event value", event.target.value);
         setSelectedDate(event.target.value);
         console.log("selectedDate = ", selectedDate);
