@@ -1,7 +1,8 @@
 import React from 'react'; //React component is responsible for interpreting jsx code. 
 //The React import isn't necessary to be added as it will be added automatically by the newer React versions
 import './App.css';
-import Expenses from './components/Expenses/Expenses';
+import Expenses from './components/ListExpenses/Expenses/Expenses';
+import NewExpense from './components/AddNewExpense/NewExpense/NewExpense';
 
 const App = () => {
 
@@ -38,6 +39,7 @@ const App = () => {
         <p>raloocka-web git repository</p>
       </header>
       <h2>Expence tracker</h2>
+      <NewExpense></NewExpense>
       <Expenses expenses={expenses} />
     </div>
   );

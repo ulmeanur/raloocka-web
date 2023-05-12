@@ -1,7 +1,7 @@
 import React from 'react';
 import './Expenses.css';
 import ExpenseItem from '../ExpenseItem/ExpenseItem';
-import Card from '../UI/Card/Card';
+import Card from '../../UI/Card/Card';
 
 // Created a new component that is responsible for displaying expenses
 // Added multiple ExpenseItem components in the component

@@ -5,7 +5,7 @@
 import React, {useState} from 'react';
 import "./ExpenseItem.css"
 import ExpenseDate from '../ExpenseDate/ExpenseDate';
-import Card from '../UI/Card/Card';
+import Card from '../../UI/Card/Card';
 
 const ExpenseItem = (props) => {
 	//props is an object that stores the data that it's passed to the component from another one 
