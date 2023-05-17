@@ -11,6 +11,8 @@ const ExpenseForm = (props) => {
 
     
     //using useState() for storing each value is better than using an object will all values that needs to be updated using prevState() because is more reliable
+   // we are using array desctructuring to store both elements from useState in separate variables or constants as above
+	
     const [enteredTitle, setEnteredTitle] = useState("");
     const [enteredAmount, setEnteredAmount] = useState("");
     const [selectedDate, setSelectedDate] = useState("");

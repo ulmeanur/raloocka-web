@@ -1,15 +1,28 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './Expenses.css';
 import ExpenseItem from '../ExpenseItem/ExpenseItem';
+import ExpensesFilter from '../ExpensesFilter/ExpensesFilter';
 import Card from '../../UI/Card/Card';
 
 // Created a new component that is responsible for displaying expenses
 // Added multiple ExpenseItem components in the component
 // Keet the expenses data in the App component and passed that data into the newly created component
 const Expenses = (props) =>  {
+
     const expensesData = props.expenses;
+	
+	const [filteredExpenseYear, setFilteredExpenseYear] = useState("2019");
+
+	const onChangeYearHandler = (passedYearValue) => {
+        setFilteredExpenseYear(passedYearValue);
+    }
+
+	console.log("Expenses.js expenseYear=", filteredExpenseYear);
+
 	return (
+			
 		<Card className='expenses'>
+			<ExpensesFilter selected={filteredExpenseYear} onChangeYear={onChangeYearHandler} />
 			<ExpenseItem
 				expenseDate={expensesData[0].date}
 				expenseTitle={expensesData[0].title}

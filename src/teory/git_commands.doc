@@ -1,0 +1,23 @@
+
+git status
+git log
+
+// ON A NEWLY PROJECT
+git remote add origin https://github.com/ulmeanur/raloocka-web.git                                
+
+
+// ON AN EXISTING BRANCH
+git checkout FEATURE_BRANCH
+git fetch origin/FEATURE_BRANCH
+
+///from the new branch other than master
+git status
+git add .
+git commit -m "MESSAGE"
+git push origin
+
+git checkout master
+git push origin
+
+
+
