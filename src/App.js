@@ -1,4 +1,4 @@
-import React from 'react'; //React component is responsible for interpreting jsx code. 
+import React, {useState} from 'react'; //React component is responsible for interpreting jsx code. 
 //The React import isn't necessary to be added as it will be added automatically by the newer React versions
 import './App.css';
 import Expenses from './components/ListExpenses/Expenses/Expenses';
@@ -33,13 +33,24 @@ const App = () => {
     }
   ];
 
+  
+
+  const addExpenseHandler = (expenseAdded) => {
+
+    console.log("In App.js");
+    console.log("expenseAdded = ", expenseAdded);
+
+    // const [expensesAddedData, setExpensesAddedData] = useState(props.expensAdded);
+    
+  };
+
   return (
     <div className="App">
       <header className="App-header">
         <p>raloocka-web git repository</p>
       </header>
       <h2>Expence tracker</h2>
-      <NewExpense></NewExpense>
+      <NewExpense onAddExpense={addExpenseHandler}></NewExpense>
       <Expenses expenses={expenses} />
     </div>
   );
