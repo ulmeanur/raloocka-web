@@ -25,7 +25,7 @@ const Expenses = (props) =>  {
 			<ExpensesFilter selected={filteredExpenseYear} onChangeYear={onChangeYearHandler} />
 
 			{
-			/* render dinamically each expence using map()
+			/* render dinamically each expense using map()
 			map() will receive the array item as a parameter and a function that will be applied on each array element
 			*/
 			expensesData.map(expense => 
