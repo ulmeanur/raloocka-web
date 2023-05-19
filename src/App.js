@@ -1,4 +1,4 @@
-import React from 'react'; //React component is responsible for interpreting jsx code. 
+import React, {useState} from 'react'; //React component is responsible for interpreting jsx code. 
 //The React import isn't necessary to be added as it will be added automatically by the newer React versions
 import './App.css';
 import Expenses from './components/ListExpenses/Expenses/Expenses';
@@ -6,7 +6,9 @@ import NewExpense from './components/AddNewExpense/NewExpense/NewExpense';
 
 const App = () => {
 
-  const expenses = [
+ //DUMMY_EXPENSES
+ 
+  const DUMMY_EXPENSES = [
     { 
       id: "e1", 
       date: new Date('April 19, 2022'), 
@@ -32,16 +34,15 @@ const App = () => {
       amount: "250$" 
     }
   ];
-
   
+  const [expensesData, setExpensesData] = useState(DUMMY_EXPENSES);
 
   const addExpenseHandler = (expenseAdded) => {
-
     console.log("In App.js");
     console.log("expenseAdded = ", expenseAdded);
-    // const [expensesAddedData, setExpensesAddedData] = useState(props.expensAdded);
-    
+    setExpensesData(prevExpensesData => [expenseAdded, ...prevExpensesData]);
   };
+  console.log("ExpensesData = ", expensesData);
 
   return (
     <div className="App">
@@ -50,7 +51,7 @@ const App = () => {
       </header>
       <h2>Expence tracker</h2>
       <NewExpense onAddExpense={addExpenseHandler}></NewExpense>
-      <Expenses expenses={expenses} />
+      <Expenses expenses={expensesData} />
     </div>
   );
 }
