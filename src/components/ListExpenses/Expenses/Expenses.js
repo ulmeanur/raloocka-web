@@ -19,6 +19,10 @@ const Expenses = (props) =>  {
 
 	console.log("Expenses.js expenseYear=", filteredExpenseYear);
 
+	const filteredExpensesData = expensesData.filter(expense => {
+		return (new Date(expense.date).getFullYear().toString() === filteredExpenseYear)
+	});
+		
 	return (
 			
 		<Card className='expenses'>
@@ -28,8 +32,9 @@ const Expenses = (props) =>  {
 			/* render dinamically each expense using map()
 			map() will receive the array item as a parameter and a function that will be applied on each array element
 			*/
-			expensesData.map(expense => 
+			filteredExpensesData.map(expense => 
 				<ExpenseItem
+					key={expense.id}
 					expenseDate={expense.date}
 					expenseTitle={expense.title}
 					expenseAmount={expense.amount}>
