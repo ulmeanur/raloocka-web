@@ -1,7 +1,8 @@
-When updating some state based on its previous value, 
-you should use pass a function to the state updating function 
+When updating some state based on its previous value (state), 
+you should use/pass the function form of the state updating function 
 (i.e., to setCounter(), in this example). This function automatically 
 receives the previous value and should return the new value:
+setIncrement(prevIncrement => prevIncrement + 1);
 
 
 
