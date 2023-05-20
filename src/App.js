@@ -23,7 +23,7 @@ const App = () => {
     },
     {
       id: "e3", 
-      date: new Date('April 11, 2022'), 
+      date: new Date('April 11, 2019'), 
       title: "New TV", 
       amount: "1000$" 
     },
