@@ -24,7 +24,6 @@ const Expenses = (props) =>  {
 	});
 		
 	return (
-			
 		<Card className='expenses'>
 			<ExpensesFilter selected={filteredExpenseYear} onChangeYear={onChangeYearHandler} />
 
@@ -32,14 +31,17 @@ const Expenses = (props) =>  {
 			/* render dinamically each expense using map()
 			map() will receive the array item as a parameter and a function that will be applied on each array element
 			*/
-			filteredExpensesData.map(expense => 
-				<ExpenseItem
-					key={expense.id}
-					expenseDate={expense.date}
-					expenseTitle={expense.title}
-					expenseAmount={expense.amount}>
-				</ExpenseItem>
-			)}
+			filteredExpensesData.length === 0 ? 
+				(<p>No expenses found.</p>) :
+				(filteredExpensesData.map(expense => 
+					<ExpenseItem
+						key={expense.id}
+						expenseDate={expense.date}
+						expenseTitle={expense.title}
+						expenseAmount={expense.amount}>
+					</ExpenseItem>
+					)
+				)}
 		</Card>
 	);
 }
