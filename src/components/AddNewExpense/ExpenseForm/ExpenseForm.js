@@ -34,7 +34,7 @@ const ExpenseForm = (props) => {
         setSelectedDate("");
 
         console.log(expenseDate);
-
+        props.onStopEditingHandler();
         props.onSaveExpenseData(expenseDate);
     }
 
@@ -73,6 +73,9 @@ const ExpenseForm = (props) => {
         console.log("selectedDate = ", selectedDate);
     }
 
+    const stopEditing = () => {
+       props.onStopEditingHandler();
+    }
     // TWO WAY DATA BINDING = listeting for events & sending data back to html elements(here the value of inputs)  
     // TWO WAY DATA BINDING helps gathering information and changing it, for e.g. on form submit
     return (
@@ -92,7 +95,8 @@ const ExpenseForm = (props) => {
                 </div>
             </div>
             <div className="new-expense__actions">
-                <button type='submit'>Add Expense</button>
+                <button type="button" onClick={stopEditing}>Cancel</button> 
+                <button type="submit">Add Expense</button>
             </div>
         </form>
     );
