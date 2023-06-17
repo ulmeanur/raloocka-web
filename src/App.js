@@ -13,25 +13,31 @@ const App = () => {
       id: "e1", 
       date: new Date('April 19, 2022'), 
       title: "Hospital Maternity Expence", 
-      amount: "2500$" 
+      amount: 1220
     },
     { 
-      id: "e2", 
-      date: new Date('April 10, 2022'), 
+      id: "e2",
+      date: new Date('Jul 10, 2022'), 
       title: "Car Insurance", 
-      amount: "505$"
+      amount: 505
     },
     {
       id: "e3", 
-      date: new Date('April 11, 2019'), 
+      date: new Date('May 11, 2019'), 
       title: "New TV", 
-      amount: "1000$" 
+      amount: 1000
     },
     { 
       id: "e4", 
-      date: new Date('April 12, 2022'), 
+      date: new Date('Sep 12, 2022'), 
       title: "New Desk(Wooden)", 
-      amount: "250$" 
+      amount: 250
+    },
+    { 
+      id: "e5", 
+      date: new Date('Jun 12, 2019'), 
+      title: "New Desk(Wooden)", 
+      amount: 250
     }
   ];
   

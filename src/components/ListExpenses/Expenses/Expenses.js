@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './Expenses.css';
 import ExpensesFilter from '../ExpensesFilter/ExpensesFilter';
 import ExpensesList from '../ExpensesList/ExpensesList';
+import ExpensesChart from '../ExpensesChart/ExpensesChart';
 import Card from '../../UI/Card/Card';
 
 // Created a new component that is responsible for displaying expenses
@@ -16,12 +17,16 @@ const Expenses = (props) => {
         setFilteredExpenseYear(passedYearValue);
     }
 
-	console.log("Expenses.js expenseYear=", filteredExpenseYear);
+	const filteredExpensesData = expensesData.filter(expense => {
+		return (new Date(expense.date).getFullYear().toString() === filteredExpenseYear)
+	});
 		
 	return (
 		<Card className="expenses">
-			<ExpensesFilter selected={filteredExpenseYear} onChangeYear={onChangeYearHandler} />
-			<ExpensesList expensesData={expensesData} filteredYear={filteredExpenseYear}/> 
+			<ExpensesFilter selected={filteredExpenseYear} onChangeYear={onChangeYearHandler}
+			 />
+			<ExpensesChart expensesData={filteredExpensesData} /> 
+			<ExpensesList expensesData={filteredExpensesData} /> 
 		</Card>
 	);
 };

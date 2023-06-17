@@ -3,9 +3,7 @@ import './ExpensesList.css';
 import ExpenseItem from '../ExpenseItem/ExpenseItem';
 
 const ExpensesList = (props) => {
-    const filteredExpensesData = props.expensesData.filter(expense => {
-		return (new Date(expense.date).getFullYear().toString() === props.filteredYear)
-	});
+    const filteredExpensesData = props.expensesData;
 
 
 	if(filteredExpensesData.length === 0) {
